@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.languageToggle {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.languageToggle:hover {
+    background-color: #0056b3;
+}
+
+.zodiacContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.zodiacBlock {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: calc(33% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.zodiacBlock:hover {
+    transform: translateY(-5px);
+}
+
+.zodiacIcon {
+    font-size: 30px;
+}
+
+.horoscopeDescription {
+    margin: 20px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.backButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .zodiacBlock {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .zodiacBlock {
+        width: calc(100% - 40px);
+    }
+
+    .horoscopeDescription {
+        font-size: 16px;
+    }
+}
