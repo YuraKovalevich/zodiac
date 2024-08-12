@@ -3,12 +3,12 @@ import styles from "./styles/Zodiac.module.css";
 import { zodiacSignsData } from "./utils/consts";
 import ZodiacBlock from "./components/ZodiacBlock";
 import { fetchHoroscope as fetchHoroscopeFromAPI } from "./API/PostDesc";
-import HoroscopeDescription from "./components/HoroscopeDescription";
-import {toggleLanguage } from './utils/zodiacBtns';
+import Modal from './components/Modal';
+import { toggleLanguage } from './utils/zodiacBtns';
 
 const ZodiacPage = () => {
     const [description, setDescription] = useState('');
-    const [selectedSign, setSelectedSign] = useState();
+    const [selectedSign, setSelectedSign] = useState(null);
     const [language, setLanguage] = useState('en');
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const ZodiacPage = () => {
             setDescription(horoscope);
             setSelectedSign(sign);
         } catch (error) {
-            setDescription('error description');
+            setDescription('Ошибка при загрузке описания');
         }
     };
 
@@ -46,7 +46,7 @@ const ZodiacPage = () => {
             </div>
 
             {description && selectedSign && (
-                <HoroscopeDescription
+                <Modal
                     description={description}
                     selectedSign={selectedSign}
                     onClose={handleCloseDescription}

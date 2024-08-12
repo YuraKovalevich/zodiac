@@ -1,8 +1,3 @@
-export const handleBackClick = (setDescription, setSelectedSign) => {
-    setDescription('');
-    setSelectedSign();
-};
-
 export const handleTouchStart = (e, touchStartX) => {
     touchStartX.current = e.touches[0].clientX;
 };
