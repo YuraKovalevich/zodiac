@@ -14,7 +14,8 @@ const ZodiacPage = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        const languageCode = window.Telegram.WebApp.user?.language_code || 'en';
+        const languageCode = window.Telegram.WebApp.initDataUnsafe.language_code || 'en';
+        console.log(languageCode)
         setLanguage(languageCode.startsWith('ru') ? 'ru' : 'en');
     }, []);
 
