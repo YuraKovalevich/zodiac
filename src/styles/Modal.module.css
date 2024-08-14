@@ -1,4 +1,5 @@
 .modalOverlay {
+    padding: 0 15px;
     position: fixed;
     top: 0;
     left: 0;
