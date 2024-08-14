@@ -4,19 +4,36 @@ body {
     padding: 0;
     background-color: #f8f9fa;
 }
-
 .languageToggle {
     margin: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background: linear-gradient(120deg, #007bff, #6a0dad, #ff69b4);
+    background-size: 200% 200%;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-position 0.5s, transform 0.3s;
+    animation: buttonGradientAnimation 3s ease infinite;
 }
 
 .languageToggle:hover {
-    background-color: #0056b3;
+    background-position: right center;
+    transform: scale(1.05);
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+@keyframes buttonGradientAnimation {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
 }
 
 .zodiacContainer {
@@ -35,12 +52,13 @@ body {
     text-align: center;
     width: calc(33% - 40px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 .zodiacBlock:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .zodiacIcon {

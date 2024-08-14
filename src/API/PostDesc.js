@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://5.35.90.171:61011/get_horoscope/';
+const API_URL = 'https://poker247tech.ru/get_horoscope/';
 
 export const fetchHoroscope = async (sign, language) => {
     const requestBody = { sign, language: language === 'ru' ? 'original' : 'translated' };

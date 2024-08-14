@@ -1,5 +1,5 @@
 import './App.css';
-import ZodiacPage from "./ZodiacPage";
+import ZodiacPage from "./pages/ZodiacPage";
 
 function App() {
   return (
